@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1025997-6CDC-4CA1-8449-6F24A0AD5C6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LatetTikvaProject</RootNamespace>
+    <AssemblyName>LatetTikvaProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\ContributionsTable.cs" />
+    <Compile Include="BLL\ContributorsTable.cs" />
+    <Compile Include="BLL\GeneralTable.cs" />
+    <Compile Include="BLL\KindOfContributionsTable.cs" />
+    <Compile Include="BLL\ListsToTalkTable.cs" />
+    <Compile Include="BLL\ListToTalk.cs" />
+    <Compile Include="BLL\MyDB.cs" />
+    <Compile Include="BLL\PartsTable.cs" />
+    <Compile Include="BLL\PerformanceContributionsTable.cs" />
+    <Compile Include="BLL\RepelledContriburorsTable.cs" />
+    <Compile Include="BLL\StatusOfContributorsTable.cs" />
+    <Compile Include="BLL\Talk.cs" />
+    <Compile Include="BLL\TalksTable.cs" />
+    <Compile Include="BLL\TarrifOfBonnusTable.cs" />
+    <Compile Include="BLL\TarrifOfBonnus.cs" />
+    <Compile Include="BLL\Contribution.cs" />
+    <Compile Include="BLL\Contributor.cs" />
+    <Compile Include="BLL\GeneralRow.cs" />
+    <Compile Include="BLL\KindOfContribution.cs" />
+    <Compile Include="BLL\Part.cs" />
+    <Compile Include="BLL\PerformanceContribution.cs" />
+    <Compile Include="BLL\Repelled.cs" />
+    <Compile Include="BLL\Status.cs" />
+    <Compile Include="BLL\Town.cs" />
+    <Compile Include="BLL\TownsTable.cs" />
+    <Compile Include="BLL\Validation.cs" />
+    <Compile Include="BLL\Worker.cs" />
+    <Compile Include="BLL\WorkersTable.cs" />
+    <Compile Include="DAL\Connect.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddCity.Designer.cs">
+      <DependentUpon>FrmAddCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddContributon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddContributon.Designer.cs">
+      <DependentUpon>FrmAddContributon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddPart.Designer.cs">
+      <DependentUpon>FrmAddPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddRepelled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddRepelled.Designer.cs">
+      <DependentUpon>FrmAddRepelled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmAddW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmAddW.Designer.cs">
+      <DependentUpon>FrmAddW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmCondition.Designer.cs">
+      <DependentUpon>FrmCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmConditionOfWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmConditionOfWorker.Designer.cs">
+      <DependentUpon>FrmConditionOfWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmContributionToday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmContributionToday.Designer.cs">
+      <DependentUpon>FrmContributionToday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmCouseNoAnsered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmCouseNoAnsered.Designer.cs">
+      <DependentUpon>FrmCouseNoAnsered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmDetailTa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmDetailTa.Designer.cs">
+      <DependentUpon>FrmDetailTa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmFindC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmFindC.Designer.cs">
+      <DependentUpon>FrmFindC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmInsertToWprCon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmInsertToWprCon.Designer.cs">
+      <DependentUpon>FrmInsertToWprCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmListContibutors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmListContibutors.Designer.cs">
+      <DependentUpon>FrmListContibutors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmListW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmListW.Designer.cs">
+      <DependentUpon>FrmListW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmNoIntersted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmNoIntersted.Designer.cs">
+      <DependentUpon>FrmNoIntersted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmPerformanceContribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmPerformanceContribution.Designer.cs">
+      <DependentUpon>FrmPerformanceContribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmPerformanceContributionInPast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmPerformanceContributionInPast.Designer.cs">
+      <DependentUpon>FrmPerformanceContributionInPast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmPerformanceCToPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmPerformanceCToPay.Designer.cs">
+      <DependentUpon>FrmPerformanceCToPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmResultOfCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmResultOfCall.Designer.cs">
+      <DependentUpon>FrmResultOfCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmTreatOnNoIntersted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmTreatOnNoIntersted.Designer.cs">
+      <DependentUpon>FrmTreatOnNoIntersted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmTreatOnNoWantDelateOrReturne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmTreatOnNoWantDelateOrReturne.Designer.cs">
+      <DependentUpon>FrmTreatOnNoWantDelateOrReturne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmUpdateContributor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmUpdateContributor.Designer.cs">
+      <DependentUpon>FrmUpdateContributor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmUpdateDetailsCoAndCallNow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmUpdateDetailsCoAndCallNow.Designer.cs">
+      <DependentUpon>FrmUpdateDetailsCoAndCallNow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmWorkersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmWorkersList.Designer.cs">
+      <DependentUpon>FrmWorkersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FrmAddCity.resx">
+      <DependentUpon>FrmAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmAddContributon.resx">
+      <DependentUpon>FrmAddContributon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmAddPart.resx">
+      <DependentUpon>FrmAddPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmAddRepelled.resx">
+      <DependentUpon>FrmAddRepelled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmAddW.resx">
+      <DependentUpon>FrmAddW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmCondition.resx">
+      <DependentUpon>FrmCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmConditionOfWorker.resx">
+      <DependentUpon>FrmConditionOfWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmContributionToday.resx">
+      <DependentUpon>FrmContributionToday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmCouseNoAnsered.resx">
+      <DependentUpon>FrmCouseNoAnsered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmDetailTa.resx">
+      <DependentUpon>FrmDetailTa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmFindC.resx">
+      <DependentUpon>FrmFindC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmInsertToWprCon.resx">
+      <DependentUpon>FrmInsertToWprCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmListContibutors.resx">
+      <DependentUpon>FrmListContibutors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmListW.resx">
+      <DependentUpon>FrmListW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmNoIntersted.resx">
+      <DependentUpon>FrmNoIntersted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmPerformanceContribution.resx">
+      <DependentUpon>FrmPerformanceContribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmPerformanceContributionInPast.resx">
+      <DependentUpon>FrmPerformanceContributionInPast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmPerformanceCToPay.resx">
+      <DependentUpon>FrmPerformanceCToPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmResultOfCall.resx">
+      <DependentUpon>FrmResultOfCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmTreatOnNoIntersted.resx">
+      <DependentUpon>FrmTreatOnNoIntersted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmTreatOnNoWantDelateOrReturne.resx">
+      <DependentUpon>FrmTreatOnNoWantDelateOrReturne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmUpdateContributor.resx">
+      <DependentUpon>FrmUpdateContributor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmUpdateDetailsCoAndCallNow.resx">
+      <DependentUpon>FrmUpdateDetailsCoAndCallNow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmWorkersList.resx">
+      <DependentUpon>FrmWorkersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DAL\LatetTikva.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\מעוצב פוטו.jpg" />
+    <None Include="Resources\מעוצב פוטו1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
